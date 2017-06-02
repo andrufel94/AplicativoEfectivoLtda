@@ -1,0 +1,18 @@
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\obj\Debug\Aplicativo Efectivo ltda.csprojResolveAssemblyReference.cache
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\bin\Aplicativo Efectivo ltda.dll.config
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\bin\Aplicativo Efectivo ltda.dll
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\bin\Aplicativo Efectivo ltda.pdb
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\bin\System.Web.Helpers.dll
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\bin\System.Web.Mvc.dll
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\bin\System.Web.Razor.dll
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\bin\System.Web.Webpages.dll
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\bin\System.Web.Webpages.Razor.dll
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\bin\System.Web.Razor.xml
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\bin\System.Web.Webpages.xml
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\bin\System.Web.Webpages.Razor.xml
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\bin\System.Web.Helpers.xml
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\bin\System.Web.Mvc.xml
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\obj\Debug\Aplicativo Efectivo ltda.dll
+C:\Users\Javier\Documents\Visual Studio 2013\Projects\Aplicativo Efectivo ltda\Aplicativo Efectivo ltda\obj\Debug\Aplicativo Efectivo ltda.pdb

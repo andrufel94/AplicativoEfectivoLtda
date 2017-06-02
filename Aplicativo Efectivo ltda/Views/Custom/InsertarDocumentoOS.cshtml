@@ -1,0 +1,99 @@
+﻿@model Aplicativo_Efectivo_ltda.Models.Documento_OS
+
+@{
+    Layout = null;
+}
+
+@{
+    var msg_result = string.IsNullOrEmpty(ViewBag.VB_Result) ? "hide" : "";
+    var disabled = string.IsNullOrEmpty(ViewBag.VB_Result) ? "" : "disabled";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>InsertarDocumentoOS</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>documento_os</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.cod_sucursal_origen, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @*@Html.EditorFor(model => model.cod_sucursal_origen)*@
+                    @Html.DropDownListFor(model => model.cod_sucursal_origen, ViewBag.VB_Sucursales as SelectList, string.Empty)
+                    @Html.ValidationMessageFor(model => model.cod_sucursal_origen)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.cod_persona_remitente, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @*@Html.TextBoxFor(model => model.cod_persona_remitente)*@
+                    @Html.DropDownListFor(model => model.cod_persona_remitente, ViewBag.VB_Clientes_Personas as SelectList, string.Empty)
+                    @Html.ValidationMessageFor(model => model.cod_persona_remitente)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.date_fecha_doc, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.date_fecha_doc, new { @Value = ViewBag.VB_Fecha_Actual.ToString("yyyy-MM-dd"), @Type = "date" })
+                    @Html.ValidationMessageFor(model => model.date_fecha_doc)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.valor, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.valor, new { @Type = "number" })
+                    @Html.ValidationMessageFor(model => model.valor)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.cod_sucursal_destino, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @*@Html.TextBoxFor(model => model.cod_sucursal_destino)*@
+                    @Html.DropDownListFor(model => model.cod_sucursal_destino, ViewBag.VB_Sucursales as SelectList, string.Empty)
+                    @Html.ValidationMessageFor(model => model.cod_sucursal_destino)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.cod_persona_destino, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @*@Html.TextBoxFor(model => model.cod_persona_destino)*@
+                    @Html.DropDownListFor(model => model.cod_persona_destino, ViewBag.VB_Clientes_Personas as SelectList, string.Empty)
+                    @Html.ValidationMessageFor(model => model.cod_persona_destino)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" @disabled/>
+                </div>
+            </div>
+
+            <div class="@msg_result">
+                <h2>
+                    @Html.Label("", Convert.ToString((string)ViewBag.VB_Result))
+                </h2>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>
