@@ -92,6 +92,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Connections\Conexion_DB.cs" />
     <Compile Include="Controllers\CustomController.cs" />
+    <Compile Include="DAO\Cliente_Empresa_DAO.cs" />
+    <Compile Include="DAO\Cliente_Empresa_DAO_DB.cs" />
     <Compile Include="DAO\Cliente_Persona_DAO.cs" />
     <Compile Include="DAO\Cliente_Persona_DAO_DB.cs" />
     <Compile Include="DAO\Documento_FCT_DAO.cs" />

@@ -4,6 +4,12 @@
     Layout = null;
 }
 
+@{
+    var msg_result = string.IsNullOrEmpty(ViewBag.VB_Result) ? "hide" : "";
+    var disabled = string.IsNullOrEmpty(ViewBag.VB_Result) ? "" : "disabled";
+}
+
+
 <!DOCTYPE html>
 
 <html>
@@ -22,17 +28,10 @@
             @Html.ValidationSummary(true)
     
             <div class="form-group">
-                @Html.LabelFor(model => model.cod_doc, new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.cod_doc)
-                    @Html.ValidationMessageFor(model => model.cod_doc)
-                </div>
-            </div>
-    
-            <div class="form-group">
                 @Html.LabelFor(model => model.cod_sucursal_origen, new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.cod_sucursal_origen)
+                    @*@Html.TextBoxFor(model => model.cod_sucursal_origen)*@
+                    @Html.DropDownListFor(model => model.cod_sucursal_origen, ViewBag.VB_Sucursales as SelectList, string.Empty)
                     @Html.ValidationMessageFor(model => model.cod_sucursal_origen)
                 </div>
             </div>
@@ -40,7 +39,8 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.cod_persona_remitente, new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.cod_persona_remitente)
+                    @*@Html.TextBoxFor(model => model.cod_persona_remitente)*@
+                    @Html.DropDownListFor(model => model.cod_persona_remitente, ViewBag.VB_Clientes_Personas as SelectList, string.Empty)
                     @Html.ValidationMessageFor(model => model.cod_persona_remitente)
                 </div>
             </div>
@@ -48,7 +48,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.date_fecha_doc, new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.date_fecha_doc)
+                    @Html.TextBoxFor(model => model.date_fecha_doc, new { @Value = ViewBag.VB_Fecha_Actual.ToString("yyyy-MM-dd"), @Type = "date" })
                     @Html.ValidationMessageFor(model => model.date_fecha_doc)
                 </div>
             </div>
@@ -56,7 +56,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.valor, new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.valor)
+                    @Html.TextBoxFor(model => model.valor, new { @Type = "number" })
                     @Html.ValidationMessageFor(model => model.valor)
                 </div>
             </div>
@@ -64,15 +64,22 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.cod_empresa, new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.cod_empresa)
+                    @*@Html.TextBoxFor(model => model.cod_empresa)*@
+                    @Html.DropDownListFor(model => model.cod_empresa, ViewBag.VB_Clientes_Empresas as SelectList, string.Empty)
                     @Html.ValidationMessageFor(model => model.cod_empresa)
                 </div>
             </div>
     
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
+                    <input type="submit" value="Create" class="btn btn-default" @disabled />
                 </div>
+            </div>
+
+            <div class="@msg_result">
+                <h3>
+                    @Html.Label("", Convert.ToString((string)ViewBag.VB_Result))
+                </h3>
             </div>
         </div>
     }
