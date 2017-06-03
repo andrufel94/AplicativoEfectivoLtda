@@ -47,5 +47,15 @@ namespace Aplicativo_Efectivo_ltda.Controllers
 
             return View();
         }
+        [HttpGet]
+        public ActionResult InsertarDocumentoFCT()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult InsertarDocumentoFCT(Documento_FCT doc_fcts)
+        {
+            return View();
+        }
 	}
 }
