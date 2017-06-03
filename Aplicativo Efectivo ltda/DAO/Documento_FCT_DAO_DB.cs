@@ -27,7 +27,7 @@ namespace Aplicativo_Efectivo_ltda.DAO
             cmd.Parameters.AddWithValue("@Id_Cliente_Persona_Origen", obj_documento.cod_persona_remitente);
             cmd.Parameters.AddWithValue("@Valor", obj_documento.valor);
             cmd.Parameters.AddWithValue("@Id_Cliente_Empresa", obj_documento.cod_empresa);
-            cmd.Parameters.AddWithValue("@@Tipo_Documento", "FCT");
+            cmd.Parameters.AddWithValue("@Tipo_Documento", "FCT");
 
             result = my_conexion_DB.Ejecutar_SQLComand(cmd);
 
